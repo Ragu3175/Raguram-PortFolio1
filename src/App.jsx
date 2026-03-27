@@ -374,9 +374,6 @@ function Scene({ cameraRef, headRef, brainRef, overlayRef, scrollRef }) {
            <meshBasicMaterial color="#000a12" transparent opacity={0.6} />
         </mesh>
       </group>
-
-      <LightWall />
-      <DataStream />
       
       <group ref={brainRef} visible={false}>
           <BrainScene />
@@ -412,44 +409,82 @@ export default function App() {
       <div className="scroll-container" style={{ position: 'relative', height: '1200vh', width: '100%', pointerEvents: 'auto', zIndex: 2 }}>
         <section className="section s1" style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', pointerEvents: 'none' }}>
           <div className="hero-text" style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '7rem', color: '#fff', margin: 0, fontWeight: 900, textTransform: 'uppercase' }}>INTELLIGENCE</h1>
-            <h1 style={{ fontSize: '7rem', color: '#00f2ff', margin: 0, fontWeight: 900, textTransform: 'uppercase' }}>EVOLVED</h1>
+            <p style={{ color: '#00f2ff', letterSpacing: '0.5rem', fontSize: '1rem', fontWeight: 'bold' }}>FULL STACK DEVELOPER</p>
+            <h1 style={{ fontSize: '7rem', color: '#fff', margin: 0, fontWeight: 900, textTransform: 'uppercase', lineHeight: 0.9 }}>BUILD.</h1>
+            <h1 style={{ fontSize: '7rem', color: '#fff', margin: 0, fontWeight: 900, textTransform: 'uppercase', lineHeight: 0.9 }}>SHIP.</h1>
+            <h1 style={{ fontSize: '7rem', color: '#00f2ff', margin: 0, fontWeight: 900, textTransform: 'uppercase', lineHeight: 0.9 }}>REPEAT.</h1>
+            <p style={{ color: '#aaa', fontSize: '1.2rem', marginTop: '1rem' }}>MERN · Three.js · React Native · AI/ML</p>
           </div>
         </section>
 
-        <section className="section s2" style={{ height: '300vh' }}></section>
+        <section className="section s2" style={{ height: '200vh' }}></section>
 
-        {/* Vision Section */}
-        <section className="section s3" style={{ height: '100vh', opacity: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="brain-panel" style={{ background: 'rgba(0, 242, 255, 0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.2)', padding: '3rem', borderRadius: '1rem', color: '#fff', maxWidth: '600px' }}>
-            <h2 style={{ color: '#00f2ff', fontSize: '2.5rem' }}>Visionary AI</h2>
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>Advanced computer vision systems that interpret the physical world with superhuman precision and speed.</p>
+        {/* Projects Sections */}
+        <section className="section" style={{ minHeight: '100vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', padding: '5rem 2rem' }}>
+          <div style={{ width: '100%', maxWidth: '1200px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            
+            {/* Project 1 */}
+            <div className="portfolio-card" style={{ background: 'rgba(255, 255, 255, 0.03)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.1)', padding: '2rem', borderRadius: '1rem', color: '#fff', transition: 'transform 0.3s' }}>
+              <span style={{ color: '#00f2ff', fontSize: '0.8rem', fontWeight: 'bold' }}>MERN · AWS · Docker · Socket.IO</span>
+              <h3 style={{ fontSize: '1.8rem', margin: '0.5rem 0' }}>SafeDrive AI</h3>
+              <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>IoT fleet monitoring with real-time alerts</p>
+              <a href="https://final-year-project-three-red.vercel.app" target="_blank" rel="noreferrer" style={{ color: '#00f2ff', textDecoration: 'none', fontWeight: 'bold' }}>VIEW PROJECT →</a>
+            </div>
+
+            {/* Project 2 */}
+            <div className="portfolio-card" style={{ background: 'rgba(255, 255, 255, 0.03)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.1)', padding: '2rem', borderRadius: '1rem', color: '#fff', transition: 'transform 0.3s' }}>
+              <span style={{ color: '#00f2ff', fontSize: '0.8rem', fontWeight: 'bold' }}>React Native · Gemini · Groq · Expo</span>
+              <h3 style={{ fontSize: '1.8rem', margin: '0.5rem 0' }}>CodePilot</h3>
+              <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Mobile AI code editor with voice & terminal</p>
+              <a href="https://github.com/Ragu3175/Mobile-AiCode-Editor" target="_blank" rel="noreferrer" style={{ color: '#00f2ff', textDecoration: 'none', fontWeight: 'bold' }}>VIEW SOURCE →</a>
+            </div>
+
+            {/* Project 3 */}
+            <div className="portfolio-card" style={{ background: 'rgba(255, 255, 255, 0.03)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.1)', padding: '2rem', borderRadius: '1rem', color: '#fff', transition: 'transform 0.3s' }}>
+              <span style={{ color: '#00f2ff', fontSize: '0.8rem', fontWeight: 'bold' }}>MERN · JWT · Redux · Socket.IO</span>
+              <h3 style={{ fontSize: '1.8rem', margin: '0.5rem 0' }}>Task Manager</h3>
+              <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Real-time collaborative task management</p>
+              <a href="https://task-assignment-app-delta.vercel.app" target="_blank" rel="noreferrer" style={{ color: '#00f2ff', textDecoration: 'none', fontWeight: 'bold' }}>VIEW PROJECT →</a>
+            </div>
+
+            {/* Project 4 */}
+            <div className="portfolio-card" style={{ background: 'rgba(255, 255, 255, 0.03)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.1)', padding: '2rem', borderRadius: '1rem', color: '#fff', transition: 'transform 0.3s' }}>
+              <span style={{ color: '#00f2ff', fontSize: '0.8rem', fontWeight: 'bold' }}>MERN · Socket.IO · JWT</span>
+              <h3 style={{ fontSize: '1.8rem', margin: '0.5rem 0' }}>Real-Time Messaging</h3>
+              <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Full-duplex chat with live presence</p>
+              <a href="https://github.com/Ragu3175" target="_blank" rel="noreferrer" style={{ color: '#00f2ff', textDecoration: 'none', fontWeight: 'bold' }}>VIEW GITHUB →</a>
+            </div>
+
+            {/* Project 5 */}
+            <div className="portfolio-card" style={{ background: 'rgba(255, 255, 255, 0.03)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.1)', padding: '2rem', borderRadius: '1rem', color: '#fff', transition: 'transform 0.3s' }}>
+              <span style={{ color: '#00f2ff', fontSize: '0.8rem', fontWeight: 'bold' }}>Python · Scikit-learn · ML</span>
+              <h3 style={{ fontSize: '1.8rem', margin: '0.5rem 0' }}>Score Predictor</h3>
+              <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Linear & polynomial regression ML pipeline</p>
+              <a href="https://github.com/Ragu3175/ML-Projects" target="_blank" rel="noreferrer" style={{ color: '#00f2ff', textDecoration: 'none', fontWeight: 'bold' }}>VIEW PROJECT →</a>
+            </div>
+
           </div>
         </section>
 
-        {/* NLP Section */}
-        <section className="section s4" style={{ height: '100vh', opacity: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="brain-panel" style={{ background: 'rgba(0, 242, 255, 0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.2)', padding: '3rem', borderRadius: '1rem', color: '#fff', maxWidth: '600px' }}>
-            <h2 style={{ color: '#00f2ff', fontSize: '2.5rem' }}>Synthetic Dialect</h2>
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>Next-generation language models capable of deep context comprehension and creative synthesis.</p>
-          </div>
-        </section>
-
-        {/* Analytics Section */}
-        <section className="section s5" style={{ height: '100vh', opacity: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="brain-panel" style={{ background: 'rgba(0, 242, 255, 0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(0, 242, 255, 0.2)', padding: '3rem', borderRadius: '1rem', color: '#fff', maxWidth: '600px' }}>
-            <h2 style={{ color: '#00f2ff', fontSize: '2.5rem' }}>Temporal Logic</h2>
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>Predictive engine processing billions of data points to forecast enterprise-scale outcomes with 99% accuracy.</p>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="section s6" style={{ height: '100vh', opacity: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {/* CTA Section */}
+        <section className="section" style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div className="hero-text" style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '4rem', color: '#fff' }}>BUILD THE FUTURE</h1>
-            <button className="cta-button" style={{ marginTop: '2rem', padding: '1rem 3rem', background: 'transparent', border: '2px solid #00f2ff', color: '#00f2ff', fontSize: '1.5rem', cursor: 'pointer' }}>Begin Integration</button>
+            <h1 style={{ fontSize: '4rem', color: '#fff', marginBottom: '2rem' }}>LET'S BUILD SOMETHING REAL.</h1>
+            <a href="mailto:ragu317317@gmail.com" className="cta-button" style={{ textDecoration: 'none', padding: '1rem 3rem', background: 'transparent', border: '2px solid #00f2ff', color: '#00f2ff', fontSize: '1.5rem', cursor: 'pointer', transition: 'all 0.3s' }}>HIRE ME</a>
           </div>
         </section>
+
+        {/* Professional Footer */}
+        <footer style={{ padding: '4rem 2rem', background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(0, 242, 255, 0.1)', color: '#fff', textAlign: 'center' }}>
+          <h2 style={{ color: '#00f2ff', margin: '0 0 1rem 0' }}>Raguram R</h2>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+            <a href="mailto:ragu317317@gmail.com" style={{ color: '#ccc', textDecoration: 'none' }}>ragu317317@gmail.com</a>
+            <a href="https://github.com/Ragu3175" target="_blank" rel="noreferrer" style={{ color: '#ccc', textDecoration: 'none' }}>GitHub</a>
+            <a href="https://linkedin.com/in/raguram-r-92504a286" target="_blank" rel="noreferrer" style={{ color: '#ccc', textDecoration: 'none' }}>LinkedIn</a>
+            <a href="https://raguram-portfolio.vercel.app" target="_blank" rel="noreferrer" style={{ color: '#ccc', textDecoration: 'none' }}>Portfolio</a>
+          </div>
+          <p style={{ color: '#666', fontSize: '0.9rem' }}>© 2026 RAGURAM R. ALL RIGHTS RESERVED.</p>
+        </footer>
       </div>
     </div>
   );

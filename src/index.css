@@ -2,172 +2,77 @@
 
 :root {
   font-family: 'Orbitron', sans-serif;
-  background-color: #050505;
-}
-
-.hero-text h1 {
-  font-family: 'Syncopate', sans-serif;
-  font-size: 6rem;
-  letter-spacing: -2px;
-  background: linear-gradient(180deg, #fff 0%, #00f2ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
-
-.brain-panel {
-  background: rgba(0, 242, 255, 0.03);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 242, 255, 0.2);
-  box-shadow: 0 0 40px rgba(0, 242, 255, 0.1);
-  padding: 3rem;
-  transition: all 0.5s ease;
-}
-
-.brain-panel:hover {
-  background: rgba(0, 242, 255, 0.07);
-  border-color: rgba(0, 242, 255, 0.5);
-}
-
-.cta-button {
-  background: transparent;
-  color: #00f2ff;
-  border: 2px solid #00f2ff;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.2), transparent);
-  transition: 0.5s;
-}
-
-.cta-button:hover::before {
-  left: 100%;
+  background-color: #020208;
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
-  background-color: #050505;
+  background-color: #020208;
   overflow-x: hidden;
   width: 100%;
-}
-
-#root {
-  width: 100%;
-}
-
-.canvas-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999; /* TOP LAYER FOR VISIBILITY TEST */
-  pointer-events: none;
-}
-
-.scroll-container {
-  position: relative;
-  height: 800vh;
-  z-index: 1; /* Below canvas */
-  pointer-events: auto;
-}
-
-.section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background: transparent !important;
-  opacity: 1 !important; /* Force visibility for debugging */
-}
-
-.loading-state {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #00f2ff;
-  font-family: 'Syncopate', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  z-index: 10000;
-}
-
-.section.s1 {
-  opacity: 1;
-}
-
-.hero-text {
-  text-align: center;
-  max-width: 800px;
+  color: white;
 }
 
 .hero-text h1 {
-  font-size: 5rem;
-  margin: 0;
-  background: linear-gradient(90deg, #fff, #444);
+  font-family: 'Syncopate', sans-serif;
+  background: linear-gradient(180deg, #fff 0%, #00f2ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
-  text-transform: uppercase;
 }
 
-.hero-text p {
-  font-size: 1.5rem;
-  color: #888;
+.portfolio-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 
-.transition-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 100;
-}
-
-.brain-panel {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  max-width: 400px;
-  margin: 1rem;
-}
-
-.brain-panel h2 {
-  color: #00f2ff;
-  margin-top: 0;
+.portfolio-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(0, 242, 255, 0.08) !important;
+  border-color: rgba(0, 242, 255, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 255, 0.1);
 }
 
 .cta-button {
-  background: #00f2ff;
-  color: #000;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta-button:hover {
+  background: #00f2ff !important;
+  color: #000 !important;
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.6);
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.section {
+  position: relative;
+  background: transparent !important;
+}
+
+.scroll-container {
+  position: relative;
+  z-index: 2;
+}
+
+.canvas-container {
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020208;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f2ff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00b8cc;
 }

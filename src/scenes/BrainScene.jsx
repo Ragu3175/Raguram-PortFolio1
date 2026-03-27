@@ -103,10 +103,10 @@ const PulsingLine = ({ start, end, color = "#00f2ff" }) => {
 export default function BrainScene() {
   const groupRef = useRef();
   const hubs = useMemo(() => [
-    { pos: [-3, 2, -10], label: "Vision Node", color: "#00f2ff" },
-    { pos: [4, -1, -20], label: "NLP Node", color: "#ff00ff" },
-    { pos: [-2, -3, -30], label: "Logic Node", color: "#00ff00" },
-    { pos: [0, 0, -45], label: "Core", color: "#00f2ff" }
+    { pos: [-3, 2, -10], label: "React.js", color: "#00f2ff" },
+    { pos: [4, -1, -20], label: "Node.js", color: "#ff00ff" },
+    { pos: [-2, -3, -30], label: "MongoDB", color: "#00ff00" },
+    { pos: [0, 0, -45], label: "Full Stack", color: "#00f2ff" }
   ], []);
 
   const connections = useMemo(() => {
